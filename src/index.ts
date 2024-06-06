@@ -6,4 +6,8 @@ app.get('/',(req:Request,res:Response)=>{
   res.send("Hello Form Express + TS...")
 })
 
+app.get('/users/:name',(req:Request,res:Response)=>{
+  res.send(`Hello ${req.params.name}`)
+})
+
 app.listen(PORT,()=>console.log("server is running..."))
